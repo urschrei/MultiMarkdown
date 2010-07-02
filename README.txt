@@ -6,6 +6,30 @@ SYNOPSIS
     *file* ... ]
 
 DESCRIPTION
+	This is a fork of the MultiMarkdown package, designed to provide compatibility
+	with the biblatex bibliography engine, the biber biblatex backend, and various
+	biblatex-compatible citation styles, in particular, the
+	Chicago Manual of Style "notes + bibliography" specification.
+	The following TeX packages/addons, as well as their dependencies
+	are required in order for the bibliography features to work:
+	Biblatex
+	Biber
+	Chicago "notes + bibliography" style files
+	
+	
+	For more information about biblatex see: 
+	http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html
+	
+	For more information about biber see:
+	http://biblatex-biber.sourceforge.net/
+	
+	For more information about the Chicago "notes + bibliography" style see:
+	http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html
+	
+	This is very much a work in progress, and may well break at any time – use at your own risk.
+	
+	===
+	
     MultiMarkdown is an extended version of Markdown. See the website for
     more information.
 
