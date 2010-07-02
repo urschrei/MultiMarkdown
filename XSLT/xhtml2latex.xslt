@@ -663,23 +663,35 @@
 	</xsl:template>
 		
 	<!-- definition list - fake it for compatibility with XHTML version -->
-    <xsl:template match="html:dl">\begin{description}
-        <xsl:apply-templates select="node()"/>
-        <xsl:text>\end{description}
-            </xsl:text>
-    </xsl:template>
+	<xsl:template match="html:dl">
+		\vspace{\baselineskip}
+		<xsl:apply-templates select="node()"/>
+		<xsl:text>
 
-    <xsl:template match="html:dt">
-        <xsl:text>\item[</xsl:text>
-        <xsl:apply-templates select="node()"/>
-        <xsl:text>]</xsl:text>
-    </xsl:template>
+</xsl:text>
+	</xsl:template>
+	
+	<xsl:template match="html:dt">
+		<xsl:text>\noindent\textbf{</xsl:text>
+		<xsl:apply-templates select="node()"/>
+		<xsl:text>}
+</xsl:text>
+	</xsl:template>
 
-    <xsl:template match="html:dd">
-        <xsl:text> </xsl:text>
-        <xsl:apply-templates select="node()"/>
-        <xsl:text></xsl:text>
-    </xsl:template>
+	<xsl:template match="html:dt[following-sibling::*[1][local-name() = 'dt']]">
+		<xsl:text>\noindent\textbf{</xsl:text>
+		<xsl:apply-templates select="node()"/>
+		<xsl:text>} \\
+</xsl:text>
+	</xsl:template>
+	
+	<xsl:template match="html:dd">
+		<xsl:text>\begin{quotation}
+</xsl:text>
+		<xsl:apply-templates select="node()"/>
+		<xsl:text>\end{quotation}
+</xsl:text>
+	</xsl:template>
 
 	<!-- code span -->
 	<xsl:template match="html:code">
@@ -985,7 +997,7 @@
 	<!-- Support for Bibliography to BibTeX conversion -->
 	
 	<xsl:template match="html:span[@class='externalcitation']">
-		<xsl:text>\cite</xsl:text>
+		<xsl:text>\autocite</xsl:text> <!-- change back to \cite if you want to use parentheses instead of footnotes -->
 		<xsl:apply-templates select="html:span" mode="citation"/>
 		<xsl:apply-templates select="html:a" mode="citation"/>
 		<xsl:text>}</xsl:text>
@@ -1083,29 +1095,10 @@
 	<xsl:template name="latex-intro">
 				<xsl:text>
 
-%
-%	PDF Stuff
-%
+% Biblatex command
+\bibliocommand
 
-%\ifpdf							% Removed for XeLaTeX compatibility
-%  \pdfoutput=1					% Removed for XeLaTeX compatibility
-  \usepackage[
-  	plainpages=false,
-  	pdfpagelabels,
-  	pdftitle={\mytitle},
-  	pagebackref,
-  	pdfauthor={\myauthor},
-  	pdfkeywords={\mykeywords}
-  	]{hyperref}
-  \usepackage{memhfixc}
-%\fi							% Removed for XeLaTeX compatibility
-
-
-%
 % Title Information
-%
-
-
 \ifx\latexauthor\undefined
 \else
 	\def\myauthor{\latexauthor}
