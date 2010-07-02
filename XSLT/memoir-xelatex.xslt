@@ -57,7 +57,7 @@
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
 %\setromanfont[Mapping=tex-text]{TeX Gyre Pagella}
-\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Helvetica Neue}
 \setsansfont[Scale=0.9]{Optima Regular}
 \setmonofont[Scale=0.8]{Inconsolata} 
 
