@@ -51,22 +51,29 @@
 	</xsl:template>
 
 	<xsl:template name="latex-header">
-		<xsl:text>\usepackage{fontspec}
-\setromanfont[Mapping=tex-text]{Palatino}
+		<xsl:text>\usepackage[UKenglish,english]{babel}
+			
+% FONTS			
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont[Mapping=tex-text]{TeX Gyre Pagella}
+\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Hoefler Text}
+\setsansfont[Scale=0.9]{Optima Regular}
+\setmonofont[Scale=0.8]{Inconsolata} 
+
+
 
 \usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
 \usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
-%\usepackage[utf8]{inputenc}		% For UTF-8 support
-\usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
 \usepackage{xcolor}				% Allow for color (annotations)
+\usepackage[pdfborder={0 0 0}]{hyperref}			% Support for hyperlinks
 
-%\geometry{landscape}			% Activate for rotated page geometry
-
-%\usepackage[parfill]{parskip}	% Activate to begin paragraphs with an empty
-								% line rather than an indent
-
+% Biblatex Stuff
+\usepackage{ifthen}
+\usepackage[babel]{csquotes}
+\usepackage[strict,backend=biber,babel=other,]{biblatex-chicago}
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
