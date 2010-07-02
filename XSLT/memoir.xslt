@@ -53,8 +53,7 @@
 %\appendixpage
 
 %	Bibliography
-\bibliographystyle{\mybibliostyle}
-\bibliocommand
+\printbibliography
 
 %	Glossary
 \printglossary
@@ -68,7 +67,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[10pt,oneside]{memoir}
+		<xsl:text>\documentclass[letterpaper,11pt,oneside]{memoir} %used to be 12pt
 \usepackage{layouts}[2001/04/29]
 \makeglossary
 \makeindex
@@ -104,8 +103,8 @@
 \settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
 \settrims{0pt}{0pt}
 
-\setlrmarginsandblock{1.5in}{1.5in}{*}
-\setulmarginsandblock{1.5in}{1.5in}{*}
+\setlrmarginsandblock{1.0in}{1.0in}{*}
+\setulmarginsandblock{1.125in}{1.0in}{*}
 
 \setmarginnotes{17pt}{51pt}{\onelineskip}
 \setheadfoot{\onelineskip}{2\onelineskip}
@@ -119,6 +118,7 @@
 			<xsl:text>
 \chapterstyle{\mychapterstyle}
 \pagestyle{\mypagestyle}
+\OnehalfSpacing
 
 %
 %		Front Matter
@@ -228,7 +228,7 @@
 	</xsl:template>
 
 	<xsl:template match="html:h3">
-		<xsl:text>\section{</xsl:text>
+		<xsl:text>\section\sffamily\mdseries\large\underline{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
 		<xsl:value-of select="$newline"/>
