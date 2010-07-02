@@ -808,9 +808,9 @@
 			 -->
 			 <xsl:text>\resizebox{1\linewidth}{!}{</xsl:text>
 		</xsl:if>
-		<xsl:text>\includegraphics{</xsl:text>
+		<xsl:text>\fbox{\includegraphics{</xsl:text>
 		<xsl:value-of select="@src"/>
-		<xsl:text>}}
+		<xsl:text>}}}
 \end{center}
 </xsl:text>
 		<xsl:if test="@title">
