@@ -60,6 +60,7 @@
 \setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Helvetica Neue}
 \setsansfont[Scale=0.9]{Optima Regular}
 \setmonofont[Scale=0.8]{Inconsolata} 
+\setlength\fboxsep{0pt}
 
 
 
