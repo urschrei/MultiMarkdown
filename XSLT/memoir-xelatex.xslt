@@ -68,7 +68,7 @@
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage{xcolor}				% Allow for color (annotations)
-\usepackage[pdfborder={0 0 0}]{hyperref}			% Support for hyperlinks
+\usepackage[pdfborder={0 0 0}]{hyperref}			% Support for hyperlinks, no ugly borders
 
 % Biblatex Stuff
 \usepackage{ifthen}
