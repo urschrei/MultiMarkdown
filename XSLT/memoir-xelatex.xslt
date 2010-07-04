@@ -74,7 +74,7 @@
 % Biblatex Stuff
 \usepackage{ifthen}
 \usepackage[babel]{csquotes}
-\usepackage[style=mla,backend=biber,babel=other,]{biblatex}
+\usepackage[style=mla,autocite=footnote,backend=biber,babel=other,]{biblatex}
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
