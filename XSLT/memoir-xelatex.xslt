@@ -53,13 +53,8 @@
 	<xsl:template name="latex-header">
 		<xsl:text>\usepackage[UKenglish,english]{babel}
 			
-% FONTS			
-\usepackage{fontspec}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Helvetica Neue}
-\setsansfont[Scale=0.9]{Helvetica Neue}
-\setmonofont[Scale=0.8]{Inconsolata} 
-\setlength\fboxsep{0pt}
+% Fonts
+\usepackage{sthfonts}
 
 
 
