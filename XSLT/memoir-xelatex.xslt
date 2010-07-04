@@ -56,9 +56,8 @@
 % FONTS			
 \usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
-%\setromanfont[Mapping=tex-text]{TeX Gyre Pagella}
 \setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Helvetica Neue}
-\setsansfont[Scale=0.9]{Optima Regular}
+\setsansfont[Scale=0.9]{Helvetica Neue}
 \setmonofont[Scale=0.8]{Inconsolata} 
 \setlength\fboxsep{0pt}
 
@@ -69,13 +68,13 @@
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage{xcolor}				% Allow for color (annotations)
-\usepackage[pdfborder={0 0 0}]{hyperref}			% Support for hyperlinks, no ugly borders
+
 
 % Biblatex Stuff
 \usepackage{ifthen}
 \usepackage[babel]{csquotes}
-\usepackage[style=mla,autocite=footnote,backend=biber,babel=other,]{biblatex}
-
+\usepackage[style=mla,autocite=footnote,backend=biber,babel=other]{biblatex}
+\usepackage[pdfborder={0 0 0}]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
 \def\mykeywords{}
