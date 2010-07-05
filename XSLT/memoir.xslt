@@ -308,6 +308,7 @@
 		<xsl:text>\addcontentsline{toc}{chapter}{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
+		<xsl:value-of select="$newline"/> <!-- new and experimental -->
 		<xsl:text>\newpage</xsl:text> <!-- new and experimental -->
 		<xsl:value-of select="$newline"/>
 		<xsl:value-of select="$newline"/>
