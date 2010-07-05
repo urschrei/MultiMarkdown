@@ -36,7 +36,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	version="1.0">
 
-	<xsl:import href="memoir.xslt"/>
+	<xsl:import href="memoir-xelatex.xslt"/> 
 	
 	<xsl:output method='text' encoding='utf-8'/>
 
