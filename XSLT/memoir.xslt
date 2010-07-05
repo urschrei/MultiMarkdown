@@ -118,7 +118,7 @@
 			<xsl:text>
 \chapterstyle{\mychapterstyle}
 \pagestyle{\mypagestyle}
-\OnehalfSpacing
+\Singlespacing % was OnehalfSpacing
 
 %
 %		Front Matter
