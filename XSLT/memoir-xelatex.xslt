@@ -54,7 +54,7 @@
 		<xsl:text>\usepackage[UKenglish,english]{babel}
 			
 % Fonts
-\usepackage{sthfonts}
+\usepackage{extfonts} % simple sty file which must be in your TeX path 
 
 
 

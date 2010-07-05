@@ -72,7 +72,7 @@
 \makeglossary
 \makeindex
 
-\def\mychapterstyle{ger}
+\def\mychapterstyle{komalike}
 \def\mypagestyle{headings}
 \def\revision{}
 
@@ -228,7 +228,7 @@
 	</xsl:template>
 
 	<xsl:template match="html:h3">
-		<xsl:text>\section\sffamily\mdseries\large\underline{</xsl:text>
+		<xsl:text>\section{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
 		<xsl:value-of select="$newline"/>
