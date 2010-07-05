@@ -67,7 +67,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[letterpaper,11pt,oneside]{memoir} %used to be 12pt
+		<xsl:text>\documentclass[letterpaper,12pt,oneside]{memoir} %used to be 12pt
 \usepackage{layouts}[2001/04/29]
 \makeglossary
 \makeindex
