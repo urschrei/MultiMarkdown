@@ -72,7 +72,7 @@
 \makeglossary
 \makeindex
 
-\def\mychapterstyle{default}
+\def\mychapterstyle{ger}
 \def\mypagestyle{headings}
 \def\revision{}
 
