@@ -70,7 +70,6 @@
 % Title
 \mainmatter
 \maketitle
-\newpage
 </xsl:text>
 	</xsl:template>
 
