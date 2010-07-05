@@ -67,7 +67,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[letterpaper,12pt,oneside]{memoir} %used to be 12pt
+		<xsl:text>\documentclass[A4,12pt,oneside]{memoir}
 \usepackage{layouts}[2001/04/29]
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
@@ -308,6 +308,7 @@
 		<xsl:text>\addcontentsline{toc}{chapter}{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
+		<xsl:text>\newpage</xsl:text> <!-- new and experimental -->
 		<xsl:value-of select="$newline"/>
 		<xsl:value-of select="$newline"/>
 	</xsl:template>
