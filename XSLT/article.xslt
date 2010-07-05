@@ -69,9 +69,8 @@
 
 % Title
 \mainmatter
-
 \maketitle
-
+\clearpage
 </xsl:text>
 	</xsl:template>
 
