@@ -68,7 +68,7 @@
 
 % Biblatex Stuff
 \usepackage{ifthen}
-\usepackage[english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
+\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backend=biber]{biblatex}
 \usepackage[pdfborder={0 0 0}]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
 \def\myauthor{Author}			% In case these were not included in metadata
