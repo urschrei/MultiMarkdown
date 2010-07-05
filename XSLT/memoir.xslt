@@ -308,8 +308,6 @@
 		<xsl:text>\addcontentsline{toc}{chapter}{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
-		<xsl:value-of select="$newline"/> <!-- new and experimental -->
-		<xsl:text>\newpage</xsl:text> <!-- new and experimental -->
 		<xsl:value-of select="$newline"/>
 		<xsl:value-of select="$newline"/>
 	</xsl:template>
@@ -317,6 +315,8 @@
 	<xsl:template match="html:h2[position()='2'][preceding-sibling::html:h2[position()='1'][translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 		'abcdefghijklmnopqrstuvwxyz') = 'abstract']]">
 		<xsl:text>\end{abstract}</xsl:text>
+		<xsl:value-of select="$newline"/> <!-- new and experimental -->
+		<xsl:text>\newpage</xsl:text> <!-- new and experimental -->
 		<xsl:value-of select="$newline"/>
 		<xsl:value-of select="$newline"/>
 		<xsl:choose>
