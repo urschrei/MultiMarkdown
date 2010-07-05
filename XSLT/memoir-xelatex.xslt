@@ -51,7 +51,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-header">
-		<xsl:text>\usepackage{polyglossia} %XeTeX replacement for Babel
+		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
 
 \setmainlanguage[variant=british]{english} % polyglossia command
 % Fonts
@@ -68,7 +68,7 @@
 
 % Biblatex Stuff
 \usepackage{ifthen}
-\usepackage[babel]{csquotes}
+\usepackage[autostyle=true,english=british,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backend=biber]{biblatex}
 \usepackage[pdfborder={0 0 0}]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
 \def\myauthor{Author}			% In case these were not included in metadata
