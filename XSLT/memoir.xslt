@@ -214,7 +214,7 @@
 				<xsl:text>\chapter*{}</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:text>\chapter*{</xsl:text>
+				<xsl:text>\chapter{</xsl:text>
 				<xsl:apply-templates select="node()"/>
 				<xsl:text>}</xsl:text>
 			</xsl:otherwise>
