@@ -53,7 +53,7 @@
 	<xsl:template name="latex-header">
 		<xsl:text>\usepackage{polyglossia} %XeTeX replacement for Babel
 
-\setdefaultlanguage{british} % polyglossia command
+\setmainlanguage[variant=british]{english} % polyglossia command
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
