@@ -69,6 +69,7 @@
 	<xsl:template name="latex-document-class">
 		<xsl:text>\documentclass[letterpaper,12pt,oneside]{memoir} %used to be 12pt
 \usepackage{layouts}[2001/04/29]
+\DisemulatePackage{setspace}
 \usepackage{setspace}
 \makeglossary
 \makeindex
