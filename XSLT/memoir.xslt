@@ -70,7 +70,7 @@
 		<xsl:text>\documentclass[letterpaper,12pt,oneside]{memoir} %used to be 12pt
 \usepackage{layouts}[2001/04/29]
 %\DisemulatePackage{setspace}
-%\usepackage{setspace}
+%\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
 \makeglossary
 \makeindex
 
@@ -120,7 +120,7 @@
 			<xsl:text>
 \chapterstyle{\mychapterstyle}
 \pagestyle{\mypagestyle}
-\SingleSpacing % was OnehalfSpacing, doublespacing also works
+\SingleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific
 
 %
 %		Front Matter
