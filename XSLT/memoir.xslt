@@ -120,7 +120,7 @@
 			<xsl:text>
 \chapterstyle{\mychapterstyle}
 \pagestyle{\mypagestyle}
-\DoubleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific
+\SingleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific
 
 %
 %		Front Matter
