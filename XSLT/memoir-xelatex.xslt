@@ -51,7 +51,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-header">
-		<xsl:text>\usepackage[UKenglish,english]{babel}
+		<xsl:text>\usepackage[UKenglish]{polyglossia}
 			
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
@@ -68,7 +68,7 @@
 % Biblatex Stuff
 \usepackage{ifthen}
 \usepackage[babel]{csquotes}
-\usepackage[style=mla,autocite=footnote,backend=biber,babel=other]{biblatex}
+\usepackage[style=mla,autocite=footnote,backend=biber]{biblatex}
 \usepackage[pdfborder={0 0 0}]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
