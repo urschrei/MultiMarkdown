@@ -67,14 +67,14 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[A4,12pt,oneside]{memoir}
+		<xsl:text>\documentclass[a4,12pt,oneside]{memoir}
 \usepackage{layouts}[2001/04/29]
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
 \makeglossary
 \makeindex
 
-\def\mychapterstyle{komalike}
+\def\mychapterstyle{}
 \def\mypagestyle{headings}
 \def\revision{}
 
