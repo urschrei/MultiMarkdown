@@ -23,6 +23,7 @@ Some other (mostly technical) differences:
 * tweaks to the article class (the title page and abstract are now on a single separate page)
 * fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
 	* The `otfinfo --family /path/to/font/fontname.extension` and the 'Font Book' (on OS X) application are extremely useful in this regard.
+* Use of British English language and paper options. Switching to US English is trivial, however.
 	
 The following TeX packages/addons, as well as their dependencies
 are required in order for the bibliography features to work:
