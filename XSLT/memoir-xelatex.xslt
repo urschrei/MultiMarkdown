@@ -54,6 +54,7 @@
 		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
 
 \setmainlanguage[variant=british]{english} % polyglossia command
+
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
@@ -71,6 +72,7 @@
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backend=biber]{biblatex}
 \usepackage[pdfborder={0 0 0}]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
+
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
 \def\mykeywords{}
