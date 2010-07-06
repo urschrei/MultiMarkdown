@@ -13,13 +13,16 @@ MultiMarkdown
 This is a fork of the MultiMarkdown package, designed to provide compatibility
 with the biblatex bibliography engine, the biber biblatex backend, and various
 biblatex-compatible citation styles, in particular, the
-Chicago Manual of Style "notes + bibliography" specification.
-It is intended exclusively for use with XeLaTeX (though it could easily be adapted).
-Some other differences:  
+Chicago Manual of Style "notes + bibliography" and MLA specifications.
+It is intended exclusively for use with XeLaTeX (though it could easily be adapted).  
+Its main purpose is to facilitate the production of high-quality PDF output in concert the with powerful citation and bibliography tools
+offered by biblatex and the biber engine, using either TextMate or Scrivener (though any text editor will work).
+Some other (mostly technical) differences:  
 
 * use of the new polyglossia multilingual typesetting package, which is a replacement for babel, designed for XeLaTeX
 * tweaks to the article class (the title page and abstract are now on a single separate page)
-* fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to set fonts in the XSLT
+* fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
+	* The `otfinfo --family /path/to/font/fontname.extension` and the 'Font Book' (on OS X) application are extremely useful in this regard.
 	
 The following TeX packages/addons, as well as their dependencies
 are required in order for the bibliography features to work:
@@ -37,10 +40,22 @@ For more information about biblatex see:
 	
 For more information about biber see:  
 <http://biblatex-biber.sourceforge.net/>  
-	
+
+For more information about polyglossia see:  
+<http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/>	  
+
+For more information about csquotes see:  
+<http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/>  
+
 For more information about the Chicago "notes + bibliography" style see:  
 <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html>  
-	
+
+For more information about the MLA style see:  
+<http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html>  
+
+(The current version of the MLA style (as of the 6th of July 2010) will not work with the latest biblatex package. If you wish to use it,
+you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
+
 **This is very much a work in progress, and may well break at any time – use at your own risk**  
   
 ---
@@ -50,13 +65,12 @@ MultiMarkdown is an extended version of Markdown. See the website for more infor
 
 <http://fletcherpenney.net/multimarkdown/>  
 
-Markdown is a text-to-HTML filter; it translates an easy-to-read / easy-to-write structured text format into HTML. Markdown's text format is most similar to that of plain text email, and supports features such as headers, emphasis, code blocks, blockquotes, and links.
+Markdown is a text-to-HTML filter; it translates an easy-to-read / easy-to-write structured text format into HTML. Markdown's text format is most similar to that of plain text email, and supports features such as headers, emphasis, code blocks, blockquotes, and links.  
 
 Markdown's syntax is designed not as a generic markup language, but
 specifically to serve as a front-end to (X)HTML. You can use span-level HTML tags anywhere in a Markdown document, and you can use block level HTML tags (like `<div>` and `<table>` as well).  
 
-For more information about Markdown's syntax, see:
-
+For more information about Markdown's syntax, see:  
 <http://daringfireball.net/projects/markdown/>  
 
 ## OPTIONS ##
@@ -79,6 +93,7 @@ Display the short-form version number.
 ## BUGS ##
 
 To file bug reports or feature requests (other than topics listed in the Caveats section above) please send email to:  
+
 support@daringfireball.net (for Markdown issues)  
 
 owner@fletcherpenney.net (for MultiMarkdown issues)  
@@ -99,9 +114,9 @@ MultiMarkdown changes by Fletcher Penney <http://fletcherpenney.net/>
 
 ## COPYRIGHT AND LICENSE ##
 
-Original Markdown Code Copyright (c) 2003-2007 John Gruber <http://daringfireball.net/> All rights reserved.  
+Original Markdown Code Copyright (c) 2003-2007 John Gruber (<http://daringfireball.net/>) All rights reserved.  
 
-MultiMarkdown changes Copyright (c) 2005-2009 Fletcher T. Penney <http://fletcherpenney.net/> All rights reserved.  
+MultiMarkdown changes Copyright (c) 2005-2009 Fletcher T. Penney (<http://fletcherpenney.net/>) All rights reserved.  
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:  
