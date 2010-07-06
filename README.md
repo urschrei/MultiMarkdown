@@ -16,13 +16,13 @@ biblatex-compatible citation styles, in particular, the
 Chicago Manual of Style "notes + bibliography" and MLA specifications.
 It is intended exclusively for use with XeLaTeX (though it could easily be adapted).  
 Its main purpose is to facilitate the production of high-quality PDF output in concert with the powerful citation and bibliography tools
-offered by biblatex and the biber engine, using either TextMate or Scrivener (though any text editor will work).
+offered by biblatex, using either TextMate or Scrivener (though any text editor will work).
 Some other (mostly technical) differences:  
 
 * use of the new polyglossia multilingual typesetting package, which is a replacement for babel, designed for XeLaTeX
 * tweaks to the article class (the title page and abstract are now on a single separate page)
 * fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
-	* The `otfinfo --family /path/to/font/fontname.extension` and the 'Font Book' (on OS X) application are extremely useful in this regard.
+	* The `otfinfo --family /path/to/font/fontname.extension` and the 'Font Book' application (on OS X) are extremely useful in this regard.
 * Use of British English language and paper options. Switching to US English is trivial, however.
 	
 The following TeX packages/addons, as well as their dependencies
@@ -54,8 +54,10 @@ For more information about the Chicago "notes + bibliography" style see:
 For more information about the MLA style see:  
 <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html>  
 
-(The current version of the MLA style (as of the 6th of July 2010) will not work with the latest biblatex package. If you wish to use it,
+(The current version of the MLA style (as of the 6th of July 2010) will **not** work with the latest biblatex package. If you wish to use it,
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
+
+Please also note that this configuration will **not** currently work with latexmk.pl (as of v4.15c), as it does not yet support biber.
 
 **This is very much a work in progress, and may well break at any time – use at your own risk**  
   
