@@ -12,7 +12,7 @@ MultiMarkdown
 
 This is a fork of the MultiMarkdown package, designed to provide compatibility
 with the biblatex bibliography engine, the biber biblatex backend, and various
-biblatex-compatible citation styles, in particular, the
+biblatex-compatible citation styles, in particular, The
 Chicago Manual of Style “notes + bibliography” and MLA specifications.
 It is intended exclusively for use with XeLaTeX (though it could easily be adapted).  
 Its main purpose is to facilitate the production of high-quality PDF output in concert with the powerful citation and bibliography tools
