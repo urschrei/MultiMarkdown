@@ -105,7 +105,7 @@
 \settrimmedsize{\stockheight}{\stockwidth}{*}	% Use entire page
 \settrims{0pt}{0pt}
 
-\setlrmarginsandblock{1.5in}{1.5in}{*}
+\setlrmarginsandblock{1.5in}{1.0in}{*}
 \setulmarginsandblock{1.125in}{1.0in}{*}
 
 \setmarginnotes{17pt}{51pt}{\onelineskip}
