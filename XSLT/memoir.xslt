@@ -67,7 +67,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[a4paper,12pt,oneside,twocolumn]{memoir}
+		<xsl:text>\documentclass[a4paper,12pt,oneside]{memoir} % twocolumn option
 \usepackage{layouts}[2001/04/29]
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
