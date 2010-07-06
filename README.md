@@ -99,11 +99,9 @@ MultiMarkdown changes by Fletcher Penney <http://fletcherpenney.net/>
 
 ## COPYRIGHT AND LICENSE ##
 
-Original Markdown Code Copyright (c) 2003-2007 John Gruber  
-    <http://daringfireball.net/> All rights reserved.  
+Original Markdown Code Copyright (c) 2003-2007 John Gruber <http://daringfireball.net/> All rights reserved.  
 
-MultiMarkdown changes Copyright (c) 2005-2009 Fletcher T. Penney  
-<http://fletcherpenney.net/> All rights reserved.  
+MultiMarkdown changes Copyright (c) 2005-2009 Fletcher T. Penney <http://fletcherpenney.net/> All rights reserved.  
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:  
