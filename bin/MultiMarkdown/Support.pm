@@ -163,10 +163,10 @@ sub ProcessMMD2PDFXeLaTeX {
 	# These are not all necessary for simple files, but are included to try
 	# and be as thorough as possible...  Sort of a poor man's latexmk.pl
 
-	my $tex_string = "; xelatex mmd.tex; biber -u -U mmd; makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo; makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo; xelatex mmd.tex; xelatex mmd.tex; xelatex mmd.tex; xelatex mmd.tex";
+	my $tex_string = "; xetex_mt mmd.tex; biber -u -U mmd; makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo; makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo; xetex_mt mmd.tex; xelatex mmd.tex; xetex_mt mmd.tex; xetex_mt mmd.tex";
 
 	if ($^O =~ /MSWin/) {
-		$tex_string = "& xelatex mmd.tex & biber -u -U mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex";
+		$tex_string = "& xetex_mt mmd.tex & biber -u -U mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & xetex_mt mmd.tex & xetex_mt mmd.tex & xetex_mt mmd.tex & xetex_mt mmd.tex";
 	}
 	PDFEngine($MMDPath, $input_file, $tex_string, $text);
 }
