@@ -61,7 +61,7 @@ The current version of the MLA style (as of the 6th of July 2010) will **not** w
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
 
 For more information about xetex-microtype see:  
-<http://www.mail-archive.com/xetex@tug.org/msg00631.html>
+<http://www.mail-archive.com/xetex@tug.org/msg00631.html>  
 <http://xetex.tk/mediawiki/index.php/Microtype_package_(preliminary_version)>  
 
 Please also note that this configuration will **not** currently work with latexmk.pl (as of v4.15c), as it does not yet support biber.
