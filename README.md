@@ -16,17 +16,20 @@ biblatex-compatible citation styles, in particular, The
 Chicago Manual of Style “notes + bibliography” and MLA specifications.
 It is intended exclusively for use with XeLaTeX (though it could easily be adapted).  
 Its main purpose is to facilitate the production of high-quality PDF output in concert with the powerful citation and bibliography tools
-offered by biblatex, using either TextMate or Scrivener (though any text editor will work).
+offered by biblatex, using either TextMate or Scrivener (though any text editor will work).  
 Some other (mostly technical) differences:  
 
 * use of the new polyglossia multilingual typesetting package, which is a replacement for babel, designed for XeLaTeX
 * tweaks to the article class (the title page and abstract are now on a single separate page)
 * fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
 	* the `otfinfo --family /path/to/font/fontname.extension` command, and the ‘Font Book’ application (on OS X) are extremely useful in this regard.
+* 	In addition, the example external font file enables support for the experimental xetex-microtype package, which provides
+	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included mt-GaramondPremrPro.cfg file
+	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with it). If you're using Texlive 2009, it'll automatically be disabled, but you may want to comment it out anyway.
 * use of British English language and paper options. Switching to US English is trivial, however.
 	
 The following TeX packages/addons, as well as their dependencies
-are required in order for the bibliography features to work:
+are required in order for the bibliography features to function:
 	
 * biblatex (included in Texlive 2009)
 * biber
@@ -56,6 +59,10 @@ For more information about the MLA style see:
 
 The current version of the MLA style (as of the 6th of July 2010) will **not** work with the latest biblatex package. If you wish to use it,
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
+
+For more information about xetex-microtype see:  
+<http://www.mail-archive.com/xetex@tug.org/msg00631.html>
+<http://xetex.tk/mediawiki/index.php/Microtype_package_(preliminary_version)>  
 
 Please also note that this configuration will **not** currently work with latexmk.pl (as of v4.15c), as it does not yet support biber.
 
