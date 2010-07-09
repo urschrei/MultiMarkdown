@@ -71,7 +71,7 @@
 \usepackage{layouts}[2001/04/29]
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
-\usepackage{glossary}
+\usepackage{glossaries}
 \makeglossary
 \makeindex
 
