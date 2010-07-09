@@ -418,9 +418,15 @@
 			<xsl:if test="concat('#',@id) = $footnoteId">
 				<xsl:apply-templates select="html:span[@class='glossary sort']" mode="glossary"/>
 				<xsl:apply-templates select="html:span[@class='glossary name']" mode="glossary"/>
-				<xsl:text>{</xsl:text>
+				<xsl:text>,</xsl:text>
+				<xsl:text>description={</xsl:text>
 				<xsl:apply-templates select="html:p" mode="glossary"/>
-				<xsl:text>}</xsl:text>
+				<xsl:text>}} </xsl:text>
+				<!--
+				<xsl:text>\Gls{</xsl:text>
+				 insert the term here 
+				<xsl:text>}</xsl:text> -->
+				
 			</xsl:if>
 		</xsl:if>
 	</xsl:template>
@@ -429,8 +435,10 @@
 		<xsl:text>{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}</xsl:text>
+		<xsl:text>{</xsl:text>
+		<xsl:text>name=</xsl:text>
+		<xsl:apply-templates select="node()"/>
 	</xsl:template>
-	
 	<xsl:template match="html:span[@class='glossary sort']" mode="glossary">
 		<xsl:text>(</xsl:text>
 		<xsl:apply-templates select="node()"/>
