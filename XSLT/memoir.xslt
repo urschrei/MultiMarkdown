@@ -72,6 +72,7 @@
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
 \usepackage{glossaries}
+\glstoctrue
 \makeglossaries
 \makeindex
 
@@ -421,12 +422,7 @@
 				<xsl:text>,</xsl:text>
 				<xsl:text>description={</xsl:text>
 				<xsl:apply-templates select="html:p" mode="glossary"/>
-				<xsl:text>}} </xsl:text>
-				<!--
-				<xsl:text>\Gls{</xsl:text>
-				 insert the term here 
-				<xsl:text>}</xsl:text> -->
-				
+				<xsl:text>}} </xsl:text>				
 			</xsl:if>
 		</xsl:if>
 	</xsl:template>
