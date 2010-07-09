@@ -56,7 +56,7 @@
 \printbibliography
 
 %	Glossary
-\printglossary
+\printglossaries
 
 
 %	Index
@@ -72,7 +72,7 @@
 %\DisemulatePackage{setspace}
 %\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
 \usepackage{glossaries}
-\makeglossary
+\makeglossaries
 \makeindex
 
 \def\mychapterstyle{}
