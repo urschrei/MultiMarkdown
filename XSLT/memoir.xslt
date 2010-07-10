@@ -165,8 +165,8 @@
 	<xsl:template name="latex-begin-body">
 		<xsl:text>% Table of Contents
 \tableofcontents
-%\listoffigures			% activate to include a List of Figures
-%\listoftables			% activate to include a List of Tables
+\listoffigures			% activate to include a List of Figures
+\listoftables			% activate to include a List of Tables
 
 
 %
