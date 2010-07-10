@@ -27,6 +27,7 @@ Some other (mostly technical) differences:
 	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included mt-GaramondPremrPro.cfg file
 	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with it). If you're using Texlive 2009, it'll automatically be disabled, but you may want to comment it out anyway.
 * use of British English language and paper options. Switching to US English is trivial, however.
+* use of the `glossaries` package, which has replaced `glossary`.
 	
 The following TeX packages/addons, as well as their dependencies
 are required in order for the bibliography features to function:
