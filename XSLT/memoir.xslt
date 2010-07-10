@@ -412,6 +412,7 @@
 
 	<!-- Memoir handles glossaries differently -->
 
+		<!-- this is slightly messy, but it works: extracts glossary term, and insert it into a \glsadd{} command -->
 
 	<xsl:template match="html:li" mode="glossary">
 		<xsl:param name="footnoteId"/>

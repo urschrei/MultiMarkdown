@@ -21,10 +21,10 @@ Some other (mostly technical) differences:
 
 * use of the new polyglossia multilingual typesetting package, which is a replacement for babel, designed for XeLaTeX
 * tweaks to the article class (the title page and abstract are now on a single separate page)
-* fonts are set via an external file (extfonts.sty, place it in your LaTeX path). This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
+* fonts are set via an external file (extfonts.sty, place it in your LaTeX path, e.g `/Users/[user]/Library/texmf/tex/latex/extfonts/`).  This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
 	* the `otfinfo --family /path/to/font/fontname.extension` command, and the ‘Font Book’ application (on OS X) are extremely useful in this regard.
 * 	In addition, the example external font file enables support for the experimental xetex-microtype package, which provides
-	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included mt-GaramondPremrPro.cfg file
+	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included `mt-GaramondPremrPro.cfg` file
 	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with it). If you're using Texlive 2009, it'll automatically be disabled, but you may want to comment it out anyway.
 * use of British English language and paper options. Switching to US English is trivial, however.
 * use of the `glossaries` package, which has replaced `glossary`.
