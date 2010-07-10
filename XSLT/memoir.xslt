@@ -48,7 +48,6 @@
 		<xsl:text>%
 % Back Matter
 %
-
 \backmatter
 %\appendixpage
 
@@ -413,16 +412,29 @@
 
 	<!-- Memoir handles glossaries differently -->
 
+
 	<xsl:template match="html:li" mode="glossary">
 		<xsl:param name="footnoteId"/>
 		<xsl:if test="parent::html:ol/parent::html:div/@class = 'footnotes'">
 			<xsl:if test="concat('#',@id) = $footnoteId">
 				<xsl:apply-templates select="html:span[@class='glossary sort']" mode="glossary"/>
 				<xsl:apply-templates select="html:span[@class='glossary name']" mode="glossary"/>
+				<xsl:variable name="glsname">
+					<xsl:apply-templates select="html:span[@class='glossary name']" mode="glossary"/>
+				</xsl:variable>
 				<xsl:text>,</xsl:text>
 				<xsl:text>description={</xsl:text>
 				<xsl:apply-templates select="html:p" mode="glossary"/>
-				<xsl:text>}} </xsl:text>				
+				<xsl:text>}} </xsl:text>
+				<xsl:variable name="glsbf">
+					<xsl:value-of select="substring-after($glsname,'{')"/>
+					</xsl:variable>
+				<xsl:variable name="glsclean">
+					<xsl:value-of select="substring-before($glsbf,'}')"/>
+					</xsl:variable>
+				<xsl:text>\glsadd{</xsl:text>
+				<xsl:value-of select="$glsclean"/>
+				<xsl:text>}</xsl:text>				
 			</xsl:if>
 		</xsl:if>
 	</xsl:template>

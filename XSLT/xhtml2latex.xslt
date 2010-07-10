@@ -558,8 +558,7 @@
 				<xsl:text>\newglossaryentry</xsl:text>
 				<xsl:apply-templates select="/html:html/html:body/html:div[@class]/html:ol/html:li[@id]" mode="glossary">
 					<xsl:with-param name="footnoteId" select="@href"/>
-				</xsl:apply-templates>
-				<xsl:text></xsl:text>
+					</xsl:apply-templates>
 			</xsl:when>
 
 			<xsl:when test="@class = 'reversefootnote'">
