@@ -62,14 +62,15 @@
 \usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
-\usepackage{xcolor}				% Allow for color (annotations)
-\definecolor{midnightblue}{rgb}{25,25,112}
+\usepackage[xetex]{xcolor}		% Allow for color (annotations)
+
 
 % Biblatex
 \usepackage{ifthen}
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
-\usepackage[pdfborder={0 0 0},xetex,colorlinks=true,linkcolor=midnightblue,citecolor=midnightblue]{hyperref} % Support for hyperlinks, no ugly borders, load after biblatex
+\definecolor{myblue}{rgb}{25,25,112}
+\usepackage[pdfborder={0 0 0},xetex,colorlinks=true,linkcolor=myblue,citecolor=myblue]{hyperref} % Support for hyperlinks, load after biblatex
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
