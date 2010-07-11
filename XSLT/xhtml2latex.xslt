@@ -5,7 +5,7 @@
 	
 	MultiMarkdown Version 2.0.b6
 	
-	$Id: xhtml2latex.xslt 517 2008-09-12 19:37:52Z fletcher $
+	Alterations by Stephan Hügel (hugels@tcd.ie)
 -->
 
 <!-- 

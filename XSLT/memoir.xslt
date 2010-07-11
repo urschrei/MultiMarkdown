@@ -7,7 +7,7 @@
 	
 	MultiMarkdown Version 2.0.b6
 	
-	$Id: memoir.xslt 525 2009-06-15 18:45:44Z fletcher $
+	Alterations by Stephan Hügel (hugels@tcd.ie)
 -->
 
 <!-- 
@@ -43,12 +43,12 @@
 		<xsl:apply-templates select="html:html/html:body"/>
 		<xsl:call-template name="latex-footer"/>
 	</xsl:template>
-
 	<xsl:template name="latex-footer">
-		<xsl:text>%
-% Back Matter
-%
+		<xsl:text>
+
+% 	Back Matter
 \backmatter
+
 %\appendixpage
 
 %	Bibliography
@@ -57,22 +57,23 @@
 %	Glossary
 \printglossaries
 
-
 %	Index
 \printindex
-
 \end{document}
+
 </xsl:text>
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[a4paper,12pt,oneside]{memoir} % twocolumn option
+		<xsl:text>
+\documentclass[a4paper,12pt,oneside]{memoir} % twocolumn option
 \usepackage{layouts}[2001/04/29]
-%\DisemulatePackage{setspace}
-%\usepackage{setspace} % this and previous allow standard LaTeX spacing control commands to be used
+
+% 	Glossaries
 \usepackage{glossaries}
 \glstoctrue
 \makeglossaries
+
 \makeindex
 
 \def\mychapterstyle{}
@@ -123,15 +124,10 @@
 \pagestyle{\mypagestyle}
 \SingleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific
 
-%
-%		Front Matter
-%
-
+%	Front Matter
 \frontmatter
 
-
-% Title Page
-
+% 	Title Page
 \maketitle
 \clearpage
 
@@ -167,14 +163,9 @@
 \tableofcontents
 \listoffigures			% activate to include a List of Figures
 \listoftables			% activate to include a List of Tables
-
-
 %
-% Main Content
-%
-
-
-% Layout settings
+% 	Main Content
+% 	Layout settings
 \setlength{\parindent}{1em}
 
 \mainmatter

@@ -9,7 +9,7 @@
 	
 	MultiMarkdown Version 2.0.b6
 	
-	$Id: memoir-xelatex.xslt 499 2008-03-23 13:03:19Z fletcher $
+	Alterations by Stephan Hügel (hugels@tcd.ie)
 -->
 
 <!-- 
@@ -51,14 +51,12 @@
 	</xsl:template>
 
 	<xsl:template name="latex-header">
-		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
-
+		<xsl:text>
+\usepackage{polyglossia} % XeTeX replacement for Babel
 \setmainlanguage[variant=british]{english} % polyglossia command
 
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
-
-
 
 \usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
 \usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
@@ -66,8 +64,7 @@
 \usepackage{tabulary}			% Support longer table cells
 \usepackage{xcolor}				% Allow for color (annotations)
 
-
-% Biblatex Stuff
+% Biblatex
 \usepackage{ifthen}
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backend=biber]{biblatex}
