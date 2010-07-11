@@ -661,6 +661,7 @@
 		<xsl:value-of select="$newline"/>
 	</xsl:template>
 		
+	
 	<!-- definition list - fake it for compatibility with XHTML version -->
 	<xsl:template match="html:dl">
 		\vspace{\baselineskip}
