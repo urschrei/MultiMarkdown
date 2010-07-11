@@ -63,7 +63,7 @@
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage{xcolor}				% Allow for color (annotations)
-\definecolor{midnightblue}{rgb}{25,25,112)
+\definecolor{midnightblue}{rgb}{25,25,112}
 
 % Biblatex
 \usepackage{ifthen}
