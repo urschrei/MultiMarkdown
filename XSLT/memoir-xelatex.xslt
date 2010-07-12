@@ -69,7 +69,7 @@
 \usepackage{ifthen}
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
-\usepackage[pdfborder={0 0 0},xetex,colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref} % Support for hyperlinks, load after biblatex
+\usepackage[pdfborder={0 0 0},dvipdfm,colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref} % Support for hyperlinks, load after biblatex
 
 
 \def\myauthor{Author}			% In case these were not included in metadata
@@ -79,7 +79,6 @@
 \def\mybibliostyle{plain}
 \def\bibliocommand{}
 \VerbatimFootnotes
-\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
 </xsl:text>
 	</xsl:template>
 
