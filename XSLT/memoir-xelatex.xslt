@@ -70,6 +70,7 @@
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
 \usepackage[pdfborder={0 0 0},xetex,colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref} % Support for hyperlinks, load after biblatex
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
