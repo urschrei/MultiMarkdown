@@ -231,26 +231,8 @@
 					</xsl:with-param>
 				</xsl:call-template>
 				<xsl:text>}</xsl:text>
-				<xsl:text>
-					
-					</xsl:text>
-					<xsl:text>\hypersetup{pdfkeywords=</xsl:text>
-					<xsl:call-template name="replace-substring">
-						<xsl:with-param name="original">
-							<xsl:value-of select="@content"/>
-						</xsl:with-param>
-						<xsl:with-param name="substring">
-							<xsl:text>,,</xsl:text>
-						</xsl:with-param>
-						<xsl:with-param name="replacement">
-							<xsl:text>,</xsl:text>
-						</xsl:with-param>
-					</xsl:call-template>
-					<xsl:text>}</xsl:text>
 			</xsl:when>
-			<xsl:text>
-				
-			</xsl:text>
+			
 			<xsl:when test="translate(@name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			'abcdefghijklmnopqrstuvwxyz') = 'xmp'">
 				<xsl:text>\usepackage{xmpincl}
