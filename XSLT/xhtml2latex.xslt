@@ -1137,7 +1137,8 @@
 \title{\mytitle}
 \author{\myauthor}
 
-\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords} % embed author,title, keyword info 
+\usepackage{hyperxmp} % embed as XMP data
 \begin{document}
 </xsl:text>
 	</xsl:template>
