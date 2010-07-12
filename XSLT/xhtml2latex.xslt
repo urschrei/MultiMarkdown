@@ -244,7 +244,7 @@
 						<xsl:text>,</xsl:text>
 					</xsl:with-param>
 				</xsl:call-template>
-				<xsl:text>}} %hyperref command
+				<xsl:text>}}
 </xsl:text>
 			</xsl:when>
 			
