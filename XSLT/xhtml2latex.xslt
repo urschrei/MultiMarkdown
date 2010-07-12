@@ -241,7 +241,7 @@
 						<xsl:text>,,</xsl:text>
 					</xsl:with-param>
 					<xsl:with-param name="replacement">
-						<xsl:text>,</xsl:text>
+						<xsl:text>, </xsl:text>
 					</xsl:with-param>
 				</xsl:call-template>
 				<xsl:text>}
