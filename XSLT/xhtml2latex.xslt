@@ -230,7 +230,7 @@
 						<xsl:text>,</xsl:text>
 					</xsl:with-param>
 				</xsl:call-template>
-				<xsl:text>}
+				<xsl:text>}</xsl:text>
 					<xsl:text>\hypersetup{pdfkeywords=</xsl:text>
 					<xsl:call-template name="replace-substring">
 						<xsl:with-param name="original">
