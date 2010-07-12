@@ -1084,7 +1084,7 @@
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
-\def\mykeywords{}
+%\def\mykeywords{}
 \def\mybibliostyle{plain}
 \def\bibliocommand{}
 
