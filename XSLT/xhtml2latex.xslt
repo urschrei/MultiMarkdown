@@ -243,8 +243,7 @@
 							<xsl:text>,</xsl:text>
 						</xsl:with-param>
 					</xsl:call-template>
-					<xsl:text>}
-						</xsl:text>
+					<xsl:text>}</xsl:text>
 			</xsl:when>
 			<xsl:when test="translate(@name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			'abcdefghijklmnopqrstuvwxyz') = 'xmp'">
