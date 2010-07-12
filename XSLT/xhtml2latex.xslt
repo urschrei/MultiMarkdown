@@ -244,7 +244,7 @@
 						<xsl:text>,</xsl:text>
 					</xsl:with-param>
 				</xsl:call-template>
-				<xsl:text>}}
+				<xsl:text>}} %hyperref command
 </xsl:text>
 			</xsl:when>
 			
@@ -1152,8 +1152,9 @@
 \title{\mytitle}
 \author{\myauthor}
 
+% hyperref commands to embed author,title, xmp info (the latter doesn't work yet for XeTeX)
 \hypersetup{unicode=true}
-\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle} % embed author,title
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle}
 \usepackage{hyperxmp} % embed as XMP data
 
 \begin{document}
