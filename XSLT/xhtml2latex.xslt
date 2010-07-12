@@ -231,7 +231,20 @@
 					</xsl:with-param>
 				</xsl:call-template>
 				<xsl:text>}
-</xsl:text>
+					<xsl:text>\hypersetup{pdfkeywords=</xsl:text>
+					<xsl:call-template name="replace-substring">
+						<xsl:with-param name="original">
+							<xsl:value-of select="@content"/>
+						</xsl:with-param>
+						<xsl:with-param name="substring">
+							<xsl:text>,,</xsl:text>
+						</xsl:with-param>
+						<xsl:with-param name="replacement">
+							<xsl:text>,</xsl:text>
+						</xsl:with-param>
+					</xsl:call-template>
+					<xsl:text>}
+						</xsl:text>
 			</xsl:when>
 			<xsl:when test="translate(@name,'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
 			'abcdefghijklmnopqrstuvwxyz') = 'xmp'">
@@ -1139,7 +1152,6 @@
 
 \hypersetup{unicode=true}
 \hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle} % embed author,title
-\hypersetup{pdfkeywords={testing,testing1,testing2,testing3}}
 \usepackage{hyperxmp} % embed as XMP data
 
 \begin{document}
