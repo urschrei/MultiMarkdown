@@ -1137,6 +1137,7 @@
 \title{\mytitle}
 \author{\myauthor}
 
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
 \begin{document}
 </xsl:text>
 	</xsl:template>
