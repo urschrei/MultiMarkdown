@@ -78,8 +78,8 @@
 
 \def\mybibliostyle{plain}
 \def\bibliocommand{}
-\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
 \VerbatimFootnotes
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
 </xsl:text>
 	</xsl:template>
 
