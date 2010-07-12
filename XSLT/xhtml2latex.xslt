@@ -1084,7 +1084,7 @@
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
-%\def\mykeywords{}
+\def\mykeywords{}
 \def\mybibliostyle{plain}
 \def\bibliocommand{}
 
@@ -1139,7 +1139,7 @@
 
 \hypersetup{unicode=true}
 \hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle} % embed author,title
-\hypersetup{pdfkeywords={\mykeywords}}
+\hypersetup{pdfkeywords={mykeywords}}
 \usepackage{hyperxmp} % embed as XMP data
 
 \begin{document}
