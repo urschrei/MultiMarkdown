@@ -1139,7 +1139,7 @@
 
 \hypersetup{unicode=true}
 \hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle} % embed author,title
-\hypersetup{pdfkeywords={mykeywords}}
+\hypersetup{pdfkeywords={\mykeywords}}
 \usepackage{hyperxmp} % embed as XMP data
 
 \begin{document}
