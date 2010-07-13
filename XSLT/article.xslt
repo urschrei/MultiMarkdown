@@ -50,7 +50,7 @@
 
 	<xsl:template name="latex-document-class">
 		<xsl:text>\documentclass[oneside,article]{memoir}
-% This is article.xslt
+
 \usepackage{layouts}[2001/04/29]
 
 % 	Glossaries
