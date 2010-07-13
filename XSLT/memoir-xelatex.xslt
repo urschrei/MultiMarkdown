@@ -51,8 +51,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-header">
-		<xsl:text>
-\usepackage{polyglossia} % XeTeX replacement for Babel
+		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
 \setmainlanguage[variant=british]{english} % Polyglossia command
 
 % Fonts
