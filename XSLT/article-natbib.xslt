@@ -36,7 +36,7 @@
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	version="1.0">
 
-	<xsl:import href="memoir.xslt"/>
+	<xsl:import href="memoir-xelatex.xslt"/>
 	<xsl:import href="natbib-support.xslt"/>
 	
 	<xsl:output method='text' encoding='utf-8'/>
@@ -52,11 +52,12 @@
 	<xsl:template name="latex-document-class">
 		<xsl:text>\documentclass[oneside,article]{memoir}
 \usepackage{layouts}[2001/04/29]
-\usepackage{xmpincl}	% Seems to be required to get the pdf to generate??
-\usepackage[round,sort&amp;compress]{natbib}
-\setcitestyle{super,open={},close={},comma}
 
-\makeglossary
+% 	Glossaries
+\usepackage{glossaries}
+\glstoctrue
+\makeglossaries
+% this is article-natbib.xslt
 \makeindex
 
 \def\mychapterstyle{default}
