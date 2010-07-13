@@ -389,7 +389,7 @@
 	
 	<!-- 
 	 (a blockquote immediately following a header 1-3) -->
-	<xsl:template match="html:blockquote[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3' or local-name() = 'body' ]]">
+	<xsl:template match="html:blockquote[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3']] | html:blockquote[ancestor::*[1][local-name() = 'body']] ">
 		<xsl:text>\epigraph{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}
@@ -398,7 +398,7 @@
 	</xsl:template>
 
 	<!-- epigraph author (a blockquote within blockquote) -->
-	<xsl:template match="html:blockquote[last()][parent::*[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3' or local-name = 'body' ]]] ">
+	<xsl:template match="html:blockquote[last()][parent::*[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3' ]]] | html:blockquote[last()][parent::*[ancestor::*[1][local-name() = 'body']]] ">
 		<xsl:text>}{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 	</xsl:template>
