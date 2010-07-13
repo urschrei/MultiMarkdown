@@ -123,7 +123,7 @@
 			<xsl:text>
 \chapterstyle{\mychapterstyle}
 \pagestyle{\mypagestyle}
-\SingleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific
+\SingleSpacing % was OnehalfSpacing, DoubleSpacing also works. These are memoir-specific!
 
 %	Front Matter
 \frontmatter
@@ -168,7 +168,7 @@
 % 	Main Content
 % 	Layout settings
 \setlength{\parindent}{1em}
-
+\newpage
 \mainmatter
 </xsl:text>
 	</xsl:template>
@@ -388,7 +388,7 @@
 
 	
 	<!-- 
-	 (a blockquote immediately following a header 1-3) -->
+	 (a blockquote immediately following a header 1-3, or the first thing in the document) -->
 	<xsl:template match="html:blockquote[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3']] | html:blockquote[ancestor::*[1][local-name() = 'body']] ">
 		<xsl:text>\epigraph{</xsl:text>
 		<xsl:apply-templates select="node()"/>
