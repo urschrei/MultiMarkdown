@@ -53,7 +53,7 @@
 	<xsl:template name="latex-header">
 		<xsl:text>
 \usepackage{polyglossia} % XeTeX replacement for Babel
-\setmainlanguage[variant=british]{english} % polyglossia command
+\setmainlanguage[variant=british]{english} % Polyglossia command
 
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
@@ -63,13 +63,16 @@
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
+\usepackage{ifthen}
 
+% Recommended setting for Polyglossia
+\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
 
 % Biblatex
-\usepackage{ifthen}
-\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes} % recommended setting for Polyglossia
 \usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
-\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref} % Support for hyperlinks, load after biblatex
+
+% Support for hyperlinks, load after biblatex
+\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
 
 
 \def\myauthor{Author}			% In case these were not included in metadata
