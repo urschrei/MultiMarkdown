@@ -168,7 +168,6 @@
 % 	Main Content
 % 	Layout settings
 \setlength{\parindent}{1em}
-\newpage
 \mainmatter
 </xsl:text>
 	</xsl:template>
