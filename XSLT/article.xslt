@@ -51,9 +51,12 @@
 	<xsl:template name="latex-document-class">
 		<xsl:text>\documentclass[oneside,article]{memoir}
 \usepackage{layouts}[2001/04/29]
-\usepackage{xmpincl}	% Seems to be required to get the pdf to generate??
 
-\makeglossary
+% 	Glossaries
+\usepackage{glossaries}
+\glstoctrue
+\makeglossaries
+
 \makeindex
 
 \def\mychapterstyle{default}
