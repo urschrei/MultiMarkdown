@@ -72,7 +72,8 @@
 
 % Support for hyperlinks, load after biblatex
 \usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
-
+% Set the PDF strings as Unicode
+\hypersetup{unicode=true}
 
 \def\myauthor{Author}			% In case these were not included in metadata
 \def\mytitle{Title}
