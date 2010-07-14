@@ -49,7 +49,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>\documentclass[oneside,article]{memoir}
+		<xsl:text>\documentclass[oneside,article,12pt]{memoir}
 
 \usepackage{layouts}[2001/04/29]
 
