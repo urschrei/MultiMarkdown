@@ -53,6 +53,9 @@
 
 \usepackage{layouts}[2001/04/29]
 
+% 	Don't number anything below a chapter division
+\setsecnumdepth{chapter}
+
 % 	Glossaries
 \usepackage{glossaries}
 \glstoctrue
