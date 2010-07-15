@@ -47,6 +47,10 @@
 
 	<xsl:import href="letterhead.xslt"/>
 	
+	<xsl:output method='text' encoding='utf-8'/>
+
+	<xsl:strip-space elements="*" />
+	
 	<xsl:template match="/">
 		<xsl:apply-templates select="html:html/html:head"/>
 		<xsl:apply-templates select="html:html/html:body"/>
