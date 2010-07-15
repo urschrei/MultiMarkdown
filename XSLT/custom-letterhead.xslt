@@ -110,13 +110,13 @@
 \chardef\fl="FB02
 
 % Define Logo or something for upper left corner
-\def\coverlogo{
-\font\logo="Didot:mapping=tex-text" at 24pt \logo
-\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
-}
+%\def\coverlogo{
+%\font\logo="Didot:mapping=tex-text" at 24pt \logo
+%\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
+%}
 
 % Use my stylesheet
-\usepackage{fletcherpenney}
+\usepackage{mmd-letterhead}
 
 % Define signature
 \ifx\signature\undefined
