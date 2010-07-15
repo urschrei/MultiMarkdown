@@ -57,40 +57,40 @@
 		<xsl:call-template name="latex-footer"/>
 	</xsl:template>
 
-		<xsl:template name="latex-header">
-			<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
-	\setmainlanguage[variant=british]{english} % Polyglossia command
+	<xsl:template name="latex-header">
+		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
+\setmainlanguage[variant=british]{english} % Polyglossia command
 
-	% Fonts
-	\usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
+% Fonts
+\usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
-	\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
-	\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
-	\usepackage{booktabs}			% Better tables
-	\usepackage{tabulary}			% Support longer table cells
-	\usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
-	\usepackage{ifthen}
+\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{booktabs}			% Better tables
+\usepackage{tabulary}			% Support longer table cells
+\usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
+\usepackage{ifthen}
 
-	% Recommended setting for Polyglossia
-	\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
+% Recommended setting for Polyglossia
+\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
 
-	% Biblatex
-	\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
+% Biblatex
+\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
 
-	% Support for hyperlinks, load after biblatex
-	\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
-	% Set the PDF strings as Unicode
-	\hypersetup{unicode=true}
+% Support for hyperlinks, load after biblatex
+\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+% Set the PDF strings as Unicode
+\hypersetup{unicode=true}
 
-	\def\myauthor{Author}			% In case these were not included in metadata
-	\def\mytitle{Title}
-	\def\mykeywords{}
+\def\myauthor{Author}			% In case these were not included in metadata
+\def\mytitle{Title}
+\def\mykeywords{}
 
-	\def\mybibliostyle{plain}
-	\def\bibliocommand{}
-	\VerbatimFootnotes
-	</xsl:text>
-		</xsl:template>
+\def\mybibliostyle{plain}
+\def\bibliocommand{}
+\VerbatimFootnotes
+</xsl:text>
+	</xsl:template>
 
 	<xsl:template name="return-address-defaults">
 		<xsl:text>% Default info for return address
