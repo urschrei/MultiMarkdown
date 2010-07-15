@@ -105,18 +105,7 @@
 %	PDF Stuff
 %
 
-%\ifpdf							% Removed for XeLaTeX compatibility
-%  \pdfoutput=1					% Removed for XeLaTeX compatibility
-  \usepackage[
-  	plainpages=false,
-  	pdfpagelabels,
-  	pdftitle={\mytitle},
-  	pagebackref,
-  	pdfauthor={\myauthor},
-  	pdfkeywords={\mykeywords}
-  	]{hyperref}
-  \usepackage{memhfixc}
-%\fi							% Removed for XeLaTeX compatibility
+
 
 \ifx\recipient\undefined
 \else
