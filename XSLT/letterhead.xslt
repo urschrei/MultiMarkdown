@@ -101,12 +101,6 @@
 	<xsl:template name="latex-intro">
 				<xsl:text>
 
-%
-%	PDF Stuff
-%
-
-
-
 \ifx\recipient\undefined
 \else
 	\addtodef{\myrecipient}{}{\recipient \\}
@@ -235,7 +229,7 @@
 \begin{figure}[t]
 \begin{adjustwidth}{-0.5in}{-0.5in}
 \begin{minipage}[l][\logoheight]{4in}
-	\coverlogo
+	%\coverlogo
 	\vspace*{\fill}
 \end{minipage} 
 \hfill 
