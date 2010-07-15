@@ -165,13 +165,6 @@
 	\addtodef{\returnaddress}{}{Tel \phone \\}
 \fi
 
-
-\ifx\fax\undefined
-\addtodef{\returnaddress}{}{\defaultfax}
-\else
-	\addtodef{\returnaddress}{}{Fax \fax \\}
-\fi
-
 \ifx\web\undefined
 \addtodef{\returnaddress}{}{\defaultweb
 }
@@ -191,7 +184,6 @@
 \def\defaultdepartment{}
 \def\defaultaddress{}
 \def\defaultphone{}
-\def\defaultfax{}
 \def\defaultweb{}
 
 % Define height for logo and return address

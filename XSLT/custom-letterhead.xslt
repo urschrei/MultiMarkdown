@@ -116,7 +116,7 @@
 %}
 
 % Use my stylesheet
-\usepackage{mmd-letterhead}
+\usepackage{fletcherpenney}
 
 % Define signature
 \ifx\signature\undefined
