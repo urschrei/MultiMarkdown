@@ -73,9 +73,13 @@
 \usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
-\usepackage[utf8]{inputenc}		% For UTF-8 support
 \usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
 \usepackage{xcolor}				% Allow for color (annotations)
+
+% Support for hyperlinks 
+\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+% Set the PDF strings as Unicode
+\hypersetup{unicode=true}
 
 %\geometry{landscape}			% Activate for rotated page geometry
 

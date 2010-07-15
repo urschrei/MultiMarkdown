@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+hugels@tcd.ie<?xml version='1.0' encoding='utf-8'?>
 
 <!-- Custom Letterhead by Fletcher Penney
 
@@ -57,12 +57,11 @@
 		<xsl:text>% Default info for return address
 % These should include '\\' where appropriate for line endings
 
-\def\defaultemail{\href{mailto:owner@fletcherpenney.net}{owner@fletcherpenney.net} \\}
+\def\defaultemail{\href{mailto:hugels@tcd.ie}{hugels@tcd.ie} \\}
 \def\defaultposition{}
 \def\defaultdepartment{}
-\def\defaultaddress{123 Fake St \\ Charleston, SC 29401 \\}
-\def\defaultphone{Tel 843 555 1234 \\}
-\def\defaultfax{Fax 843 555 2345 \\}
+\def\defaultaddress{103 Meadowvale \\ Clonkeen Road, Co. Dublin \\}
+\def\defaultphone{Tel +353 86 829 4881 \\}
 \def\defaultweb{}
 
 % Define height for logo and return address
@@ -74,7 +73,7 @@
 % Define Logo or something for upper left corner
 \def\coverlogo{
 \font\logo="Didot:mapping=tex-text" at 24pt \logo
-\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
+\href{mailto:hugels@tcd.ie}{\St ephan\color{accent}Hügel\color{black}}
 }
 
 % Use my stylesheet
