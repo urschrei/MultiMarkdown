@@ -111,8 +111,8 @@
 
 % Define Logo or something for upper left corner
 \def\coverlogo{
-\font\logo="Didot:mapping=tex-text" at 24pt\logo
-\href{mailto:hugels@tcd.ie}{\St ephan\color{accent}Hugel\color{black}}
+\font\logo="Didot:mapping=tex-text" at 24pt \logo
+\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
 }
 
 % Use my stylesheet
