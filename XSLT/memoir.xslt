@@ -66,8 +66,7 @@
 	</xsl:template>
 
 	<xsl:template name="latex-document-class">
-		<xsl:text>
-\documentclass[a4paper,12pt,oneside]{memoir} % twocolumn option
+		<xsl:text>\documentclass[a4paper,12pt,oneside]{memoir} % twocolumn option
 \usepackage{layouts}[2001/04/29]
 
 % 	Glossaries
