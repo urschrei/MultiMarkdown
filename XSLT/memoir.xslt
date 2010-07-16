@@ -387,7 +387,7 @@
 	
 	<!-- 
 	 (a blockquote immediately following a header 1-3, or the first thing in the document) -->
-	<xsl:template match="html:blockquote[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3']] | html:blockquote[parent::node = 'body'] ">
+	<xsl:template match="html:blockquote[preceding-sibling::*[1][local-name() = 'h1' or local-name() = 'h2' or local-name() = 'h2' or local-name() = 'h3']] ">
 		<xsl:text>\epigraph{</xsl:text>
 		<xsl:apply-templates select="node()"/>
 		<xsl:text>}
