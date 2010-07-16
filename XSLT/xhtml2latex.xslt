@@ -1153,7 +1153,7 @@
 \author{\myauthor}
 
 % hyperref commands to embed author,title, xmp info (the latter doesn't work yet for XeTeX)
-% \hypersetup{unicode=true}
+\hypersetup{unicode=true}
 \hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle}
 \usepackage{hyperxmp} % embed as XMP data
 
