@@ -68,7 +68,9 @@ For more information about xetex-microtype see:
 Please also note that this configuration will **not** currently work with latexmk.pl (as of v4.15c), as it does not yet support biber.
 
 **This is very much a work in progress, and may well break at any time – use at your own risk**  
-  
+
+![Screen Shot](http://dl.dropbox.com/u/21382/photos/screenshot.png)
+
 ---
 
 	
