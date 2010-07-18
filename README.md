@@ -69,11 +69,13 @@ Please also note that this configuration will **not** currently work with latexm
 
 **This is very much a work in progress, and may well break at any time – use at your own risk**  
 
-![Screen Shot](http://dl.dropbox.com/u/21382/photos/screenshot.png)
+![Screen Shot][]
+
+[Screen Shot]: http://dl.dropbox.com/u/21382/photos/screenshot.png "Screen shot showing glyph protrusion" width=640 height=480
 
 ---
 
-	
+
 MultiMarkdown is an extended version of Markdown. See the website for more information.  
 
 <http://fletcherpenney.net/multimarkdown/>  
