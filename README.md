@@ -25,38 +25,32 @@ Some other (mostly technical) differences:
 	* the `otfinfo --family /path/to/font/fontname.extension` command, and the ‘Font Book’ application (on OS X) are extremely useful in this regard. You should update your Tex Live installation using the `sudo mktexlsr` command after making any changes to files/folders.
 * 	In addition, the example external font file enables support for the experimental xetex-microtype package, which provides
 	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included `mt-GaramondPremrPro.cfg` file
-	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with it). If you're using Texlive 2009, it'll automatically be disabled, but you may want to comment it out anyway.
+	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with Texlive 2010). If you're using Texlive 2009, it'll be automatically disabled, but you may want to comment it out anyway.
 * use of British English language and paper options. Switching to US English is trivial, however.
 * use of the `glossaries` package, which has replaced `glossary`.
 	
-The following TeX packages/addons, as well as their dependencies
+The following TeX packages/addons, **as well as their dependencies**
 are required in order for the bibliography features to function:
 	
-* biblatex (included in Texlive 2009)
-* biber
-* the biblatex Chicago “notes + bibliography” style files
-* polyglossia (included in Texlive 2009)
-* csquotes (included in Texlive, but obtaining the current version is recommended)
-* optional: The biblatex MLA 0.9 style (currently in beta)
+* [biblatex] (included in Texlive 2009)
+* [biber] (and its dependencies)
+* [Chicago notes + bibliography] style files for biblatex
+* [polyglossia] (included in Texlive 2009)
+* [csquotes] (included in Texlive, but obtaining the current version is recommended)
+* optional: The [biblatex MLA 0.9] style (currently in beta)
 	
 	
-For more information about biblatex see:  
-<http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html>  
+[biblatex]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html>  
 	
-For more information about biber see:  
-<http://biblatex-biber.sourceforge.net/>  
+[biber]: http://biblatex-biber.sourceforge.net/>  
 
-For more information about polyglossia see:  
-<http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/>	  
+[polyglossia]: http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/>	  
 
-For more information about csquotes see:  
-<http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/>  
+[csquotes]: http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/>  
 
-For more information about the Chicago “notes” + bibliography" style see:  
-<http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html>  
+[Chicago notes + bibliography]: <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html>  
 
-For more information about the MLA style see:  
-<http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html>  
+[biblatex mla 0.9]: <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html>  
 
 The current version of the MLA style (as of the 6th of July 2010) will **not** work with the latest biblatex package. If you wish to use it,
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
