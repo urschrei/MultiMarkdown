@@ -40,17 +40,17 @@ are required in order for the bibliography features to function:
 * optional: The [biblatex MLA 0.9] style (currently in beta)
 	
 	
-[biblatex]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html>  
+[biblatex]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html
 	
-[biber]: http://biblatex-biber.sourceforge.net/>  
+[biber]: http://biblatex-biber.sourceforge.net/
 
-[polyglossia]: http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/>	  
+[polyglossia]: http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/
 
-[csquotes]: http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/>  
+[csquotes]: http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/
 
-[Chicago notes + bibliography]: <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html>  
+[Chicago notes + bibliography]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html
 
-[biblatex mla 0.9]: <http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html>  
+[biblatex mla 0.9]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html
 
 The current version of the MLA style (as of the 6th of July 2010) will **not** work with the latest biblatex package. If you wish to use it,
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
