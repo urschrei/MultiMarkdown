@@ -32,17 +32,17 @@ Some other (mostly technical) differences:
 The following TeX packages/addons, **as well as their dependencies**
 are required in order for the bibliography features to function:
 	
-* [biblatex] (included in Texlive 2009)
-* [biber] (and its dependencies)
+* [biblatex] (included in Texlive 2010)
+* [biber 0.5.5] (and its dependencies)
 * [Chicago notes + bibliography] style files for biblatex
-* [polyglossia] (included in Texlive 2009)
-* [csquotes] (included in Texlive, but obtaining the current version is recommended)
+* [polyglossia] (included in Texlive 2010)
+* [csquotes] (included in Texlive 2010)
 * optional: The [biblatex MLA 0.9] style (currently in beta)
 	
 	
 [biblatex]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html
 	
-[biber]: http://biblatex-biber.sourceforge.net/
+[biber 0.5.5]: http://biblatex-biber.sourceforge.net/
 
 [polyglossia]: http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/
 
@@ -52,7 +52,7 @@ are required in order for the bibliography features to function:
 
 [biblatex mla 0.9]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html
 
-The current version of the MLA style (as of the 6th of July 2010) will **not** work with the latest biblatex package. If you wish to use it,
+The current version of the MLA style (as of the 17th of September 2010) will **not** work with the latest biblatex package. If you wish to use it,
 you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
 
 For more information about xetex-microtype see:  
