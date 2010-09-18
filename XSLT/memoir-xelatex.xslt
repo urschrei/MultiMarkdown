@@ -67,8 +67,18 @@
 % Recommended setting for Polyglossia
 \usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
 
-% Biblatex
-\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
+% Biblatex:
+% ==============================================================================
+% Pick one of the below to switch between MLA and Chicago
+
+%\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
+
+% == OR ==
+
+\usepackage[notes,strict,autocite=footnote,backref=true,%
+backend=biber]{biblatex-chicago}
+
+% ==============================================================================
 
 % Support for hyperlinks, load after biblatex
 \usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
