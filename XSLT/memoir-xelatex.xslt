@@ -58,7 +58,7 @@
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
 \usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
-\usepackage{graphicx}			% To include graphics in pdfs (jpg, gif, png &c)
+\usepackage{graphicx}			% To include graphics in pdfs (jpg, gif, png)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
