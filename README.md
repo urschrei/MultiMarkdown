@@ -53,7 +53,8 @@ are required in order for the bibliography features to function:
 [biblatex mla 0.9]: http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-mla.html
 
 The current version of the MLA style (as of the 17th of September 2010) will **not** work with the latest biblatex package. If you wish to use it,
-you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop.
+you'll have to obtain it yourself. I suggest <http://groups.google.com/group/comp.text.tex/> as a first stop. By default, the
+package is currently set to use the ‘biblatex-chicago notes’ style.
 
 For more information about xetex-microtype see:  
 <http://www.mail-archive.com/xetex@tug.org/msg00631.html>  
