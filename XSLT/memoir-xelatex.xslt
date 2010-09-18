@@ -58,7 +58,7 @@
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
 \usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
-\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{graphicx}			% To include graphics in pdfs (jpg, gif, png &c)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
@@ -69,19 +69,22 @@
 
 % Biblatex:
 % ==============================================================================
-% Pick one of the below to switch between MLA and Chicago
+% Pick one of the below to switch between MLA and Chicago styles
 
 %\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
 
 % == OR ==
 
+% Change ‘notes’ to ‘authordate’ if you wish
 \usepackage[notes,strict,autocite=footnote,backref=true,%
 backend=biber]{biblatex-chicago}
 
 % ==============================================================================
 
 % Support for hyperlinks, load after biblatex
-\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage[pdfborder={0 0 0},%
+colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,%
+urlcolor=MidnightBlue]{hyperref}
 % Set the PDF strings as Unicode
 \hypersetup{unicode=true}
 
