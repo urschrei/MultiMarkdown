@@ -145,7 +145,7 @@ sub ProcessMMD2PDF {
 	# These are not all necessary for simple files, but are included to try
 	# and be as thorough as possible...  Sort of a poor man's latexmk.pl
 	
-	my $tex_string = "; pdflatex mmd.tex; biber mmd; makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo; makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo; pdflatex mmd.tex; pdflatex mmd.tex; pdflatex mmd.tex; pdflatex mmd.tex";
+	my $tex_string = "; pdflatex mmd.tex ; biber mmd ; makeglossaries mmd ; pdflatex mmd.tex ; pdflatex mmd.tex";
 
 	if ($^O =~ /MSWin/) {
 		$tex_string = "& pdflatex mmd.tex & biber mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & pdflatex mmd.tex & pdflatex mmd.tex & pdflatex mmd.tex & pdflatex mmd.tex";
@@ -163,7 +163,7 @@ sub ProcessMMD2PDFXeLaTeX {
 	# These are not all necessary for simple files, but are included to try
 	# and be as thorough as possible...  Sort of a poor man's latexmk.pl
 
-	my $tex_string = "; xelatex mmd.tex; biber -u -U mmd; makeglossaries mmd; xelatex mmd.tex; xelatex mmd.tex";
+	my $tex_string = "; xelatex mmd.tex ; biber mmd ; makeglossaries mmd ; xelatex mmd.tex; xelatex mmd.tex";
 
 	if ($^O =~ /MSWin/) {
 		$tex_string = "& xelatex mmd.tex & biber -u -U mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex";
