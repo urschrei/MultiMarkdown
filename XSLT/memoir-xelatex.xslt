@@ -57,7 +57,7 @@
 % Fonts
 \usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
 
-\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+%\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
 \usepackage{graphicx}			% To include graphics in pdfs (jpg, gif, png)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
@@ -92,9 +92,9 @@ urlcolor=MidnightBlue]{hyperref}
 \def\mytitle{Title}
 \def\mykeywords{}
 
-\def\mybibliostyle{plain}
+%\def\mybibliostyle{plain}
 \def\bibliocommand{}
-\VerbatimFootnotes
+%\VerbatimFootnotes
 </xsl:text>
 	</xsl:template>
 
