@@ -77,7 +77,7 @@
 
 % Change ‘notes’ to ‘authordate’ if you wish
 \usepackage[notes,strict,autocite=footnote,backref=true,%
-backend=biber]{biblatex-chicago}
+hyperref=true,autocite=footnote,backend=biber]{biblatex-chicago}
 
 % ==============================================================================
 
