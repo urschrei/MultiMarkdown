@@ -1084,12 +1084,41 @@
 	
 	<xsl:template name="latex-header">
 		<xsl:text>\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
+\usepackage[british]{babel}
+
 \usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage[utf8]{inputenc}		% For UTF-8 support
 \usepackage[T1]{fontenc}		% Use T1 font encoding for accented characters
-\usepackage{xcolor}				% Allow for color (annotations)
+\usepackage[svgnames]{xcolor}	% Allow for color (annotations)
+\usepackage{ifthen}
+\usepackage{microtype}
+
+% Recommended setting for Polyglossia/Babel
+\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
+
+% Biblatex:
+% ==============================================================================
+% Pick one of the below to switch between MLA and Chicago styles
+
+%\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
+
+% == OR ==
+
+% Change ‘notes’ to ‘authordate’ if you wish
+\usepackage[notes,strict,autocite=footnote,backref=true,%
+hyperref=true,autocite=footnote,backend=biber,bibencoding=UTF-8]%
+{biblatex-chicago}
+
+% ==============================================================================
+
+% Support for hyperlinks, load after biblatex
+\usepackage[pdfborder={0 0 0},%
+colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,%
+urlcolor=MidnightBlue]{hyperref}
+% Set the PDF strings as Unicode
+\hypersetup{unicode=true}
 
 %\geometry{landscape}			% Activate for rotated page geometry
 
