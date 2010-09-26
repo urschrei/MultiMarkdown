@@ -35,7 +35,7 @@ are required in order for the bibliography features to function:
 * [biblatex] (included in Texlive 2010)
 * [biber >= v0.5.5] (and its dependencies)
 * [Chicago notes + bibliography] style files for biblatex
-* [polyglossia] (included in Texlive 2010)
+* [polyglossia] or [babel] (both included in Texlive 2010)
 * [csquotes] (included in Texlive 2010)
 * optional: The [biblatex MLA 0.9] style (currently in beta)
 	
@@ -45,6 +45,8 @@ are required in order for the bibliography features to function:
 [biber >= v0.5.5]: http://biblatex-biber.sourceforge.net/
 
 [polyglossia]: http://www.tex.ac.uk/ctan/macros/xetex/latex/polyglossia/
+
+[babel]: http://www.ctan.org/tex-archive/info/babel/babel.pdf
 
 [csquotes]: http://www.ctan.org/tex-archive/macros/latex/contrib/csquotes/
 
