@@ -17,7 +17,7 @@ $data = <>;
 # Clean up strings of \cites into one citation
 
 while ($data =~ s{
-	(\\cite[tp]?\*?)((?:\[(?:see|e\.g\.)\]\[\])?\{)(.*?)\}
+	(\\autocite[tp]?\*?)((?:\[(?:see|e\.g\.)\]\[\])?\{)(.*?)\}
 	\1\{(.*?)\}
 }{
 	$1 . "$2$3, $4\}";	
@@ -31,7 +31,7 @@ while ($data =~ s{
 # e.g. $\backslash$citeyearpar\{Dewey:1997\}
 
 $data =~ s{
-	\$\\backslash\$(cite.*?)
+	\$\\backslash\$(autocite.*?)
 	\\\{(.*?)\\\}
 }{
 	"\\" . $1 . "{$2}";
