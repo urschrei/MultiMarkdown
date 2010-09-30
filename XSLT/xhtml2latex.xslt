@@ -1086,7 +1086,7 @@
 		<xsl:text>\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
 \usepackage[british]{babel}
 
-\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
+\usepackage{graphicx}			% To include graphics in pdfs (jpg, gif, png, etc)
 \usepackage{booktabs}			% Better tables
 \usepackage{tabulary}			% Support longer table cells
 \usepackage[utf8]{inputenc}		% For UTF-8 support

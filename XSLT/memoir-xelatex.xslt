@@ -5,7 +5,7 @@
 
 	Uses the LaTeX memoir class for output
 	
-	Modified for use XeLaTeX (suggested by Talazem Al-Azem)
+	Modified for use with XeLaTeX (suggested by Talazem Al-Azem)
 	
 	MultiMarkdown Version 2.0.b6
 	
