@@ -43,10 +43,17 @@ def fix_cites(fname = None):
     except IOError:
         logging.critical("Couldn't read from file %s. exiting", fname)
         raise
-    #expression will end in {2,} to match one or more subsequent occurrences
-    m = re.compile(r"(\[[a-zA-Z]+\][{]?[a-zA-Z].:[\d].[}])")
+    m = re.compile(r'^(.+ )((?:\\autocite)(\[[\w+\s.\..]+\]\{[a-zA-Z]+:\d{4}[a-zA-Z]{2}\})){2,}(.+)$')
+    nc = []
     for l in lines:
-       print m.findall(l)
+        hit = m.match(l)
+        if hit:
+            print "Hit"
+            print hit.groups()
+    sys.exit()
+    with open('/users/sth/out.txt', 'w') as f:
+        for out_line in nc:
+            f.write(out_line)
     sys.exit()
 
 fix_cites(fromcl.file)
