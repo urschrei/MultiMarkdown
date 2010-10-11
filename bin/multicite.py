@@ -43,14 +43,15 @@ def fix_cites(fname = None):
     except IOError:
         logging.critical("Couldn't read from file %s. exiting", fname)
         raise
-    m = re.compile(r'^(.+ )((?:\\autocite)(\[[\w+\s.\..]+\]\{[a-zA-Z]+:\d{4}[a-zA-Z]{2}\})){2,}(.+)$')
     nc = []
+    comp = re.compile(r'\\autocite')
     for l in lines:
-        hit = m.match(l)
-        if hit:
+        if comp.search(l):
             print "Hit"
-            print hit.groups()
-    sys.exit()
+            s = l.split('\\autocite')
+            nc.append('%s\\autocite%s' % (s[0], ''.join(s[1:])))
+        else:
+            nc.append(l)
     with open('/users/sth/out.txt', 'w') as f:
         for out_line in nc:
             f.write(out_line)
