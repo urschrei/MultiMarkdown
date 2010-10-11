@@ -145,10 +145,10 @@ sub ProcessMMD2PDF {
 	# These are not all necessary for simple files, but are included to try
 	# and be as thorough as possible...  Sort of a poor man's latexmk.pl
 	
-	my $tex_string = "; /users/sth/scripts/multicite.py -f mmd.tex ; pdflatex mmd.tex ; biber --fastsort mmd ; makeglossaries mmd ; pdflatex mmd.tex ; pdflatex mmd.tex";
+	my $tex_string = "; \"$MMDPath\"/utilities/multicite.py -f mmd.tex ; pdflatex mmd.tex ; biber --fastsort mmd ; makeglossaries mmd ; pdflatex mmd.tex ; pdflatex mmd.tex ; pdflatex mmd.tex";
 
 	if ($^O =~ /MSWin/) {
-		$tex_string = "& pdflatex mmd.tex & biber --fastsort mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & pdflatex mmd.tex & pdflatex mmd.tex & pdflatex mmd.tex & pdflatex mmd.tex";
+		$tex_string = "& \"$MMDPath\"/utilities/multicite.py -f mmd.tex & pdflatex mmd.tex & biber --fastsort mmd & makeglossaries mmd & pdflatex mmd.tex & pdflatex mmd.tex & pdflatex mmd.tex";
 	}	
 	PDFEngine($MMDPath, $input_file, $tex_string, $text);
 
@@ -166,7 +166,7 @@ sub ProcessMMD2PDFXeLaTeX {
 	my $tex_string = "; \"$MMDPath\"/utilities/multicite.py -f mmd.tex ; xelatex mmd.tex ; biber --fastsort mmd ; makeglossaries mmd ; xelatex mmd.tex ; xelatex mmd.tex ; xelatex mmd.tex";
 
 	if ($^O =~ /MSWin/) {
-		$tex_string = "& xelatex mmd.tex & biber --fastsort mmd & makeindex -t mmd.glg -o mmd.gls -s mmd.ist mmd.glo & makeindex -s `kpsewhich basic.gst` -o mmd.gls mmd.glo & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex";
+		$tex_string = "& \"$MMDPath\"/utilities/multicite.py -f mmd.tex & xelatex mmd.tex & biber --fastsort mmd & makeglossaries mmd & xelatex mmd.tex & xelatex mmd.tex & xelatex mmd.tex";
 	}
 	PDFEngine($MMDPath, $input_file, $tex_string, $text);
 }
