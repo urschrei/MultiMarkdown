@@ -17,13 +17,6 @@ import argparse
 import logging
 import traceback
 
-# logging stuff
-logging.basicConfig(level=logging.DEBUG,
-format='%(asctime)s %(levelname)s %(message)s',
-datefmt='%a, %d %b %Y %H:%M:%S',
-filename='multicite.log',
-filemode='a')
-
 # define command-line arguments
 parser = argparse.ArgumentParser\
 (description='Fix multiple autocite instances')
@@ -35,26 +28,44 @@ fromcl = parser.parse_args()
 
 def fix_cites(fname = None):
     """
-    Fix citations using regex
+    Fix citations using regex and a devious list comprehension
     """
     try:
         with fname:
             lines = [line for line in fname]
     except IOError:
-        logging.critical("Couldn't read from file %s. exiting", fname)
         raise
     nc = []
     comp = re.compile(r'\\autocite')
     for l in lines:
         if comp.search(l):
-            print "Hit"
             s = l.split('\\autocite')
             nc.append('%s\\autocite%s' % (s[0], ''.join(s[1:])))
         else:
             nc.append(l)
-    with open('/users/sth/out.txt', 'w') as f:
+    with open(fname.name, 'w') as f:
         for out_line in nc:
             f.write(out_line)
-    sys.exit()
 
+def main():
+    """ main function.
+    """
+print "Processing citations"
 fix_cites(fromcl.file)
+print "Finished processing citations"
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except (KeyboardInterrupt, SystemExit):
+        # actually raise these so it exits cleanly
+        raise
+    except Exception, error:
+        # all other exceptions, so display the error
+        print "Stack trace:\n", traceback.print_exc(file = sys.stdout)
+    else:
+        pass
+    finally:
+        # exit cleanly once we've done everything else
+        sys.exit(0)
