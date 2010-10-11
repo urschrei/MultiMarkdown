@@ -41,22 +41,24 @@ def fix_cites(fname = None):
             lines = [line for line in fname]
     except IOError:
         print 'Can\'t read from file %s' % fname.name
-    nc = []
+    proc_lines = []
     comp = re.compile(r'\\(auto)?cite')
-    for l in lines:
-        if comp.search(l):
-            s = l.split('\\autocite')
-            nc.append('%s\\autocite%s' % (s[0], ''.join(s[1:])))
+    for each_l in lines:
+        if comp.search(each_l):
+            l_match = each_l.split('\\autocite')
+            proc_lines.append(
+            '%s\\autocite%s' % (l_match[0], ''.join(l_match[1:]))
+            )
         else:
-            nc.append(l)
+            proc_lines.append(each_l)
     try:
-        with open(fname.name, 'w') as f:
-            for out_line in nc:
-                f.write(out_line)
+        with open(fname.name, 'w') as file_out:
+            for out_line in proc_lines:
+                file_out.write(out_line)
     except IOError:
         print 'Can\'t write to file %s' % fname.name
         raise
-    print 'Done. Processed %s line(s)' % len(nc)
+    print 'Done. Processed %s line(s)' % len(proc_lines)
 
 
 def main():
