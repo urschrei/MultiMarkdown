@@ -28,8 +28,9 @@ try:
     type = argparse.FileType("r",0))
     fromcl = parser.parse_args()
 except IOError:
-    print 'Couldn\'t open specified file!'
-    raise
+    print 'Couldn\'t open file %s\nExiting…' % sys.argv[2]
+    # slightly hacky, but should be fine
+    raise SystemExit
 
 def fix_cites(fname = None):
     """
