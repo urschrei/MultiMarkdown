@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 """
-Alters sequential instances of \autocite{} into a single instance of
-\autocite{}, with the contents of subsequent instances inserted into the new
+Alters sequential instances of \autocite[]{} into a single instance of
+\autocite[]{}, with the contents of subsequent instances inserted into the new
 "parent"
 
 Example:
@@ -36,13 +36,11 @@ def fix_cites(fname = None):
     Tidy citations using regex and a devious list comprehension
     """
     print 'Processing citations in %s' % fname.name
-    try:
-        with fname:
-            lines = [line for line in fname]
-    except IOError:
-        print 'Can\'t read from file %s' % fname.name
+    with fname:
+        lines = [line for line in fname]
     proc_lines = []
-    comp = re.compile(r'\\(auto)?cite')
+    # match against \cite(s) or \autocite(s)
+    comp = re.compile(r'\\(auto)?cite(s)?')
     for each_l in lines:
         if comp.search(each_l):
             l_match = each_l.split('\\autocite')
