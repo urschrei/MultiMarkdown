@@ -24,7 +24,7 @@ Some other (mostly technical) differences:
 * When using XeTeX, fonts are set via an external file (`aux/extfonts.sty`, place it in your LaTeX path, e.g `/Users/[user]/Library/texmf/tex/latex/extfonts/`).  This is intended for convenience, as you no longer have to specify fonts in the XSLT file(s). Please be aware that only fonts installed on your own system will work. 
 	* the `otfinfo --family /path/to/font/fontname.extension` command, and the ‘Font Book’ application (on OS X) are extremely useful in this regard. You should update your Tex Live installation using the `sudo mktexlsr` command after making any changes to files/folders.
 * 	In addition, the example external font file enables support for the experimental xetex-microtype package, which provides
-	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included `aux\mt-GaramondPremrPro.cfg` file
+	microtypographic features for selected fonts (in this case, Garamond Premier Pro). The included `aux/mt-GaramondPremrPro.cfg` file
 	should be placed in the same directory as the xetex-microtype package. See below for a link to the package. Please note that it will only work with Texlive 2010 (or rather: the XeTeX version supplied with Texlive 2010). If you're using Texlive 2009, it'll be automatically disabled, but you may want to comment it out anyway. If using pdfTeX, the standard microtype package is called
 * use of British English language and paper options. Switching to US English is trivial, however.
 * use of the `glossaries` package, which has replaced `glossary`.
