@@ -47,60 +47,22 @@
 
 	<xsl:import href="letterhead.xslt"/>
 	
-	<xsl:output method='text' encoding='utf-8'/>
-
-	<xsl:strip-space elements="*" />
-	
 	<xsl:template match="/">
 		<xsl:apply-templates select="html:html/html:head"/>
 		<xsl:apply-templates select="html:html/html:body"/>
 		<xsl:call-template name="latex-footer"/>
 	</xsl:template>
 
-	<xsl:template name="latex-header">
-		<xsl:text>\usepackage{polyglossia} % XeTeX replacement for Babel
-\setmainlanguage[variant=british]{english} % Polyglossia command
-
-% Fonts
-\usepackage{extfonts} % simple sty file which must be in your TeX path, define your fonts there
-
-\usepackage{fancyvrb}			% Allow \verbatim et al. in footnotes
-\usepackage{graphicx}			% To include graphics in pdf's (jpg, gif, png, etc)
-\usepackage{booktabs}			% Better tables
-\usepackage{tabulary}			% Support longer table cells
-\usepackage[svgnames]{xcolor}	% Allow for color (annotations), see xcolor.pdf for details
-\usepackage{ifthen}
-
-% Recommended setting for Polyglossia
-\usepackage[autostyle=true,english=british,autopunct=true,strict=true]{csquotes}
-
-% Biblatex
-\usepackage[style=mla,autocite=footnote,backref=true,backend=biber]{biblatex}
-
-% Support for hyperlinks, load after biblatex
-\usepackage[pdfborder={0 0 0},colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
-% Set the PDF strings as Unicode
-\hypersetup{unicode=true}
-
-\def\myauthor{Author}			% In case these were not included in metadata
-\def\mytitle{Title}
-\def\mykeywords{}
-
-\def\mybibliostyle{plain}
-\def\bibliocommand{}
-\VerbatimFootnotes
-</xsl:text>
-	</xsl:template>
-
 	<xsl:template name="return-address-defaults">
 		<xsl:text>% Default info for return address
 % These should include '\\' where appropriate for line endings
 
-\def\defaultemail{\href{mailto:hugels@tcd.ie}{hugels@tcd.ie} \\}
+\def\defaultemail{\href{mailto:owner@fletcherpenney.net}{owner@fletcherpenney.net} \\}
 \def\defaultposition{}
 \def\defaultdepartment{}
-\def\defaultaddress{103 Meadowvale \\ Clonkeen Road, Co. Dublin \\}
-\def\defaultphone{Tel +353 86 829 4881 \\}
+\def\defaultaddress{123 Fake St \\ Charleston, SC 29401 \\}
+\def\defaultphone{Tel 843 555 1234 \\}
+\def\defaultfax{Fax 843 555 2345 \\}
 \def\defaultweb{}
 
 % Define height for logo and return address
@@ -110,10 +72,10 @@
 \chardef\fl="FB02
 
 % Define Logo or something for upper left corner
-%\def\coverlogo{
-%\font\logo="Didot:mapping=tex-text" at 24pt \logo
-%\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
-%}
+\def\coverlogo{
+\font\logo="Didot:mapping=tex-text" at 24pt \logo
+\href{http://fletcherpenney.net/}{\fl etcherpenney.\color{accent}net\color{black}}
+}
 
 % Use my stylesheet
 \usepackage{fletcherpenney}
@@ -134,4 +96,5 @@
 	</xsl:template>
 
 
+	
 </xsl:stylesheet>
